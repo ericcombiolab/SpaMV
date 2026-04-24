@@ -1,11 +1,53 @@
-## SpaMV: An interpretable spatial multi-omics data integration and dimension reduction algorithm
+## SpaMV: Interpretable Spatial Multi-Omics Integration
 
-## Installation
+SpaMV is a spatial multi-view representation learning framework for integrating spatial multi-omics data. It is designed
+to capture both **shared structure across omics** and **omics-specific signals**, enabling interpretable downstream
+analysis such as clustering and visualization.
 
-1) Create and activate a conda environment with python 3.12 and r-base
+---
+
+## ✨ Highlights
+
+- Integrates multiple spatial omics modalities
+- Preserves omics-specific biological signals
+- Produces interpretable low-dimensional embeddings
+
+---
+
+## 🚀 Quick Start
+
+### 1. Create environment
+```bash
+conda create -n spamv python=3.12 rpy2 scanpy r-mclust=6.1.1
+conda activate spamv
+```
+### 2. Install SpaMV
+```bash
+pip install spamv
+```
+
+### 3. Download sample data
+```bash
+wget https://zenodo.org/records/16436314/files/Data.zip
+unzip Data.zip
+```
+
+### 4. Run tutorial
+```bash
+# to reproduce our results on simulated datasets
+python Tutorial_simulation.py
+# to reproduce our results on realworld datasets
+python Tutorial_realworld.py
+```
+
+---
+
+## 📦 Installation
+
+1) Create and activate a conda environment with Python 3.12, rpy2, r-mclust 6.1.1, and scanpy
 
 ```
-conda create -n spamv python==3.12 r-base
+conda create -n spamv python==3.12 rpy2 r-mclust=6.1.1 scanpy
 conda activate spamv
 ```
 
@@ -27,12 +69,24 @@ where
 ```
 pip install spamv
 ```
+---
 
-## Getting started
-See [Documentation and Tutorials](https://spamv-tutorials.readthedocs.io/en/latest/index.html).
+## 📊 Data
 
-## Tutorial
+All datasets used in this project are publicly available:  
 
-We provide two jupyter notebooks (Tutorial_simulation.ipynb and Tutorial_realworld.ipynb) to reproduce the results in
-our paper. Before you run them, please make sure that you have downloaded the simulated data and/or real-world data from
-our Zenodo repositoy.
+https://zenodo.org/records/16436314  
+
+### Data contents
+- Simulated datasets  
+- Real-world spatial multi-omics datasets
+---
+
+## 📚Documentation
+Additional tutorials and documentation:  
+https://spamv-tutorials.readthedocs.io/  
+
+---
+
+## 📜 License
+This project is licensed under the MIT License.
